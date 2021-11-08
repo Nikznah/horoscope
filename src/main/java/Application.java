@@ -1,43 +1,35 @@
 import java.util.Locale;
 
+/**
+ * Программа - гороскоп
+ * Определяет гороскоп на сегодня по введеным знакам задиака.
+ * Входные параметры - название знаков задиака на русском языке через пробел
+ * Пример: лев близнецы козерог
+ */
 public class Application {
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_RESET = "\u001B[0m";
-    // добавим красок ---> коду
     public static void main(String[] args) {
-        String[] arrAllZnak ={"овен", "телец", "близнецы", "рак", "лев", "дева",
+        String[] arrAllSign = {"овен", "телец", "близнецы", "рак", "лев", "дева",
                 "весы", "скорпион", "стрелец", "козерог", "водолей", "рыбы"};
-        // проверяю наличие входного параметра
-        if (args.length != 0){
-            // добавил вохможность вводить сразу несколько знаков задиака через пробел
-            for (String arg: args
-                 ) {
-             // делаю все маленькое
+
+        if (args.length == 0) {
+            throw new IllegalArgumentException("Введите один или более аргументов!");
+        }
+
+        for (String arg : args) {
             String name = arg.toLowerCase();
-            // проверяю на наличие знака задиака в массиве
-            boolean checker = false;
-            for (int i = 0; i < arrAllZnak.length;i++ ){
-                if (arrAllZnak[i].equals(name)){
-                    checker = true;
+            boolean check = false;
+            for (String str : arrAllSign) {
+                if (name.equals(str)) {
+                    check = true;
                     break;
                 }
             }
-            // если есть
-            if (checker){
-                // рандомим инт
-                int fate =(int) (Math.random()*2);
-                // вызываем метод
-                Gethoroscope.Horoscope(name,fate);
+            if (!check) {
+                throw new IllegalArgumentException("Знак задиака \"" + name + "\" отсутствует в базе данных! - ");
             }
-            // если нет
-            else{
-                // красный вывод (ошибка)
-            System.out.println(ANSI_RED + "Знака задиака: \"" + name +"\" нет в базе данных"+ ANSI_RESET);
-            }
-            }
-        }
-        else {
-            System.out.println(ANSI_RED + "Введите знак(и) задиака!" + ANSI_RESET);
+
+            int fate = (int) (Math.random() * 2);
+            Gethoroscope.Horoscope(name, fate);
         }
     }
 }
