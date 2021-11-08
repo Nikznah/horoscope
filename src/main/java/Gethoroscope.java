@@ -15,39 +15,51 @@ public static void Horoscope(String name,int fate){
     switch(name){
         case "овен":
             System.out.println(Infohere.Arr1[fate]);
+            System.out.println("-----------------");
             break;
         case "телец":
             System.out.println(Infohere.Arr2[fate]);
+            System.out.println("-----------------");
             break;
         case "близнецы":
             System.out.println(Infohere.Arr3[fate]);
+            System.out.println("-----------------");
             break;
         case "рак":
             System.out.println(Infohere.Arr4[fate]);
+            System.out.println("-----------------");
             break;
         case "лев":
             System.out.println(Infohere.Arr5[fate]);
+            System.out.println("-----------------");
             break;
         case "дева":
             System.out.println(Infohere.Arr6[fate]);
+            System.out.println("-----------------");
             break;
         case "весы":
             System.out.println(Infohere.Arr7[fate]);
+            System.out.println("-----------------");
             break;
         case "скорпион":
             System.out.println(Infohere.Arr8[fate]);
+            System.out.println("-----------------");
             break;
         case "стрелец":
             System.out.println(Infohere.Arr9[fate]);
+            System.out.println("-----------------");
             break;
         case "козерог":
             System.out.println(Infohere.Arr10[fate]);
+            System.out.println("-----------------");
             break;
         case "водолей":
             System.out.println(Infohere.Arr11[fate]);
+            System.out.println("-----------------");
             break;
         case "рыбы":
             System.out.println(Infohere.Arr12[fate]);
+            System.out.println("-----------------");
             break;
     }
     }
