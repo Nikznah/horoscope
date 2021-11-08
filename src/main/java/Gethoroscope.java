@@ -8,11 +8,11 @@ public class Gethoroscope {
         return word.substring(0, 1).toUpperCase() + word.substring(1);
     }
 
-public static void Horoscope(String Name,int fate){
+public static void Horoscope(String name,int fate){
     Date today = new Date();
     System.out.printf("%1$s %2$td %2$tB %2$tY", "Ваш гороскоп на:", today);
-    System.out.println("\n"+  firstUpperCase(Name)+ ":");
-    switch(Name){
+    System.out.println("\n"+  firstUpperCase(name)+ ":");
+    switch(name){
         case "овен":
             System.out.println(Infohere.Arr1[fate]);
             break;

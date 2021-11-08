@@ -3,15 +3,15 @@ import java.util.Locale;
 public class Application {
 
     public static void main(String[] args) {
-        String[] ArrAllZnak ={"овен", "телец", "близнецы", "рак", "лев", "дева",
+        String[] arrAllZnak ={"овен", "телец", "близнецы", "рак", "лев", "дева",
                 "весы", "скорпион", "стрелец", "козерог", "водолей", "рыбы"};
         if (args.length != 0){
             // проверяю наличие входного параметра
             String Name = args[0].toLowerCase();
             // проверяю на наличие знака задиака в массиве
             boolean checker = false;
-            for (int i = 0; i < ArrAllZnak.length;i++ ){
-                if (ArrAllZnak[i].equals(Name)){
+            for (int i = 0; i < arrAllZnak.length;i++ ){
+                if (arrAllZnak[i].equals(Name)){
                     checker = true;
                     break;
                 }
