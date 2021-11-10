@@ -3,16 +3,16 @@ import java.util.Date;
 /**
  * Вывод гороскопа в консоль
  */
-public class Gethoroscope {
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_RESET = "\u001B[0m";
+public class Horoscope {
+    private static final String ANSI_RED = "\u001B[31m";
+    private static final String ANSI_RESET = "\u001B[0m";
 
-    public static String firstUpperCase(String word) {
+    private static String firstUpperCase(String word) {
         if (word == null || word.isEmpty()) return ""; //или return word;
         return word.substring(0, 1).toUpperCase() + word.substring(1);
     }
 
-    public static void Horoscope(String name, int fate) {
+    public static void getHoroscope(String name, int fate) {
         Date today = new Date();
         System.out.printf("%1$s %2$td %2$tB %2$tY", "Ваш гороскоп на:", today);
         System.out.println("\n" + firstUpperCase(name) + ":");

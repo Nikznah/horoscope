@@ -1,5 +1,3 @@
-import java.util.Locale;
-
 /**
  * Программа - гороскоп
  * Определяет гороскоп на сегодня по введеным знакам задиака.
@@ -25,11 +23,11 @@ public class Application {
                 }
             }
             if (!check) {
-                throw new IllegalArgumentException("Знак задиака \"" + name + "\" отсутствует в базе данных! - ");
+                throw new IllegalArgumentException("Знак задиака \"" + name + "\" отсутствует в базе данных!");
             }
 
             int fate = (int) (Math.random() * 2);
-            Gethoroscope.Horoscope(name, fate);
+            Horoscope.getHoroscope(name, fate);
         }
     }
 }
